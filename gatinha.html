@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charm Baby Marie</title>
+    <link rel="stylesheet" href="style2.css">
+    <script>
+        function changeImage(src) {
+            document.getElementById('largeImage').src = src;
+        }
+    </script>
+</head>
+<body>
+
+    <div class="container">
+        <div class="image-gallery">
+            <div class="small-images">
+                <div class="small-image" onclick="changeImage('imagens/anel3.png')">
+                    <img src="gatinha braço.png" alt="Imagem Pequena 1">
+                </div>
+                <div class="small-image" onclick="changeImage('imagens/anel03.png')">
+                    <img src="gatinha.png" alt="Imagem Pequena 2">
+                </div>
+                <div class="small-image" onclick="changeImage('imagens/anel033.png')">
+                    <img src="gatinhapulseira.png" alt="Imagem Pequena 3">
+                </div>
+            </div>
+            <div class="large-image">
+                <img id="largeImage" src="humanizada.png" alt="Imagem Grande">
+            </div>
+        </div>
+      
+        <div class="other-product">
+            <h1>Charm Baby Marie</h1>
+            <p>R$ 649,00 </p>
+            <p>ou 10x de </p>
+            <br>
+            <button class="buy-button">Comprar</button>
+            <div class="">
+            </div>
+            <div class="freight-info">
+                <p>Entrega para todo o Brasil. Trocas em até 30 dias.</p>
+                <ul>
+                    <li>Frete grátis em compras acima de R$ 1.000,00</li>
+                    <br>
+                    <li>10% OFF na primeira compra com o cupom PRIMEIRACOMPRA</li>
+                    <br>
+                    <li>Entrega para todo o Brasil. Trocas em até 30 dias</li>
+                    <br>
+                    <li>Entrega no mesmo dia e dia seguinte para a Grande São Paulo</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 Sua Loja. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>

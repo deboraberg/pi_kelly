@@ -1,0 +1,138 @@
+<!DOCTYPE html> 
+<html lang="pt-BR">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minha Loja</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Adicione o link para ícones (como Font Awesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="logo">MINHA LOJA</div>
+      <div class="search-container">
+        <input type="text" placeholder="Buscar por nome ou código..." class="search" />
+        <button class="search-button"><i class="fas fa-search"></i></button>
+      </div>
+      <nav class="menu">
+        <a href="#">Lançamentos</a>
+        <a href="#">Charms</a>
+        <a href="#">Braceletes</a>
+        <a href="anel.html">Anéis</a>
+        <a href="colar.html">Colares</a>
+        <a href="#">Brincos</a>
+      </nav>
+      <div class="cart-icon" onclick="toggleCart()">🛒 <span id="cart-count">0</span></div>
+    </header>
+  
+
+    <main class="main-content">
+        <div class="container">
+            <h2 class="titulo-secao"></h2>
+            
+            <div class="produtos-linha">
+                <!-- Primeira linha com 3 colares -->
+                <div class="produto-container">
+                    <a href="gatinha.html"><img src="372004-800-800.png" alt="" class="imagem-produto"></a>
+                    <div class="detalhes-produto">
+                        <h3>Charm Baby Marie</h3>
+                        <span class="preco"></span>
+                    </div>
+                </div>
+
+                <div class="produto-container">
+                    <a href="cinderela.html"><img src="sapatinho da cinderela.png" alt="" class="imagem-produto"></a>
+                    <div class="detalhes-produto">
+                        <h3>Charm Prata Pendente Disney Sapatinho De Cristal Cinderela</h3>
+                        <span class="preco"></span>
+                    </div>
+                </div>
+
+                <div class="produto-container">
+                    <a href="stich.html"><img src="stich.png" alt="" class="imagem-produto"></a>
+                    <div class="detalhes-produto">
+                        <h3>Charm Prata Disney Stitch de Formatura</h3>
+                        <span class="preco"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="produtos-linha">
+                <!-- Segunda linha com 3 blusas -->
+                <div class="produto-container">
+                    <a href="nossasenhora.html"><img src="nossa senhora.png" alt="" class="imagem-produto"></a>
+                    <div class="detalhes-produto">
+                        <h3>Charm de Prata Nossa Senhora Aparecida Manto Azul</h3>
+                        <span class="preco"></span>
+                    </div>
+                </div>
+
+                <div class="produto-container">
+                    <a href="chinelo.html"><img src="chineo.png" alt="" class="imagem-produto"></a>
+                    <div class="detalhes-produto">
+                        <h3>Charm Pendente Chinelo De Dedo</h3>
+                        <span class="preco"></span>
+                    </div>
+                </div>
+
+                <div class="produto-container">
+                    <a href="Brasil.html"><img src="brazil.png" alt="" class="imagem-produto">
+                    <div class="detalhes-produto">
+                        <h3>Charm Prata Pendente Flor de Ipê Coleção Brasil</h3>
+                        <span class="preco"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</a>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>A sua privacidade é importante para nós</p>
+        </div>
+    </div>
+
+
+
+  <script>
+    let cart = {};
+
+    function addToCart(productName) {
+      if (cart[productName]) {
+        cart[productName]++;
+      } else {
+        cart[productName] = 1;
+      }
+      updateCart();
+    }
+
+    function removeFromCart(productName) {
+      delete cart[productName];
+      updateCart();
+    }
+
+    function updateCart() {
+      const cartItems = document.getElementById('cart-items');
+      const cartCount = document.getElementById('cart-count');
+      cartItems.innerHTML = '';
+      let totalCount = 0;
+
+      for (let item in cart) {
+        totalCount += cart[item];
+        const li = document.createElement('li');
+        li.innerHTML = `${item} x${cart[item]} <button onclick="removeFromCart('${item}')">X</button>`;
+        cartItems.appendChild(li);
+      }
+
+      cartCount.textContent = totalCount;
+    }
+
+    function toggleCart() {
+      const cartEl = document.getElementById('cart');
+      cartEl.style.display = cartEl.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+</body>
+</html>

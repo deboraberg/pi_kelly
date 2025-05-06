@@ -1,0 +1,113 @@
+/* Estilo geral */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+/* Layout da página */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Galeria de imagens */
+.image-gallery {
+    display: flex;
+}
+
+/* Imagens pequenas na vertical */
+.small-images {
+    display: flex;
+    flex-direction: column; /* Arranjando as imagens pequenas na vertical */
+    gap: 10px; /* Espaçamento entre as imagens pequenas */
+    margin-right: 20px; /* Espaço entre as pequenas e a grande */
+}
+
+.small-image {
+    cursor: pointer;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: box-shadow 0.3s;
+}
+
+.small-image:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.small-image img {
+    width: 100px; /* Largura fixa para as imagens pequenas */
+    height: 63px; /* Altura fixa para as imagens pequenas */
+}
+
+.large-image {
+    margin-top: 10px; /* Margem superior */
+}
+
+.large-image img {
+    width: 400px; /* Largura da imagem grande */
+    height: auto; /* Altura automática */
+    border-radius: 8px;
+}
+
+/* Estilo para a nova seção de produtos */
+.other-product {
+    max-width: 400px;
+    margin-left: 20px; /* Espaço entre a imagem e as informações */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.other-product h1 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.buy-button {
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    transition: transform 0.3s;
+}
+
+.buy-button:hover {
+    background-color: #e55a9c;
+}
+
+.freight-info {
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+.freight-info ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+/* Rodapé */
+.footer {
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 50px;
+    border-top: 1px solid #ff69b4;
+}
+
